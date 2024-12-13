@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp35
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double ortalama1 = OrtalamaHesapla(1.5, 2.2, 3.4); 
+            Console.WriteLine("Ortalama1 : " + ortalama1);
+            double ortalama2 = OrtalamaHesapla(8.3, 7.2, 6.1, 4.7);
+            Console.WriteLine("Ortalama2: " + ortalama2);
+
+        }
+        static double OrtalamaHesapla(params double[] sayilar) 
+        { 
+            double toplam = 0; foreach (double sayi in sayilar) 
+            { 
+                toplam += sayi; 
+            } 
+            double ortalama1 = toplam / sayilar.Length;
+            return ortalama1;
+        }
+    }
+}
